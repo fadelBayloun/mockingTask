@@ -9,9 +9,10 @@ import java.util.List;
 
 public interface BankClientAPI {
     List<Account> getAccounts();
+
     List<Card> getCards();
 
-    boolean retrieveTransfer(Account sourceAccount,Account destinationAccount, BigDecimal amount);
+    boolean retrieveTransfer(Account sourceAccount, Account destinationAccount, BigDecimal amount);
 
     boolean retrieveLoanPayment(Account account, BigDecimal amount);
 }

@@ -9,8 +9,8 @@ import java.util.Collections;
 import java.util.List;
 
 @Component
-public class ActualBankClientAPI implements BankClientAPI{
-    public List<Account> getAccounts(){
+public class ActualBankClientAPI implements BankClientAPI {
+    public List<Account> getAccounts() {
         return Collections.emptyList();
     }
 
@@ -18,11 +18,11 @@ public class ActualBankClientAPI implements BankClientAPI{
         return Collections.emptyList();
     }
 
-    public boolean retrieveTransfer(Account sourceAccount,Account destinationAccount, BigDecimal amount){
+    public boolean retrieveTransfer(Account sourceAccount, Account destinationAccount, BigDecimal amount) {
         return false;
     }
 
-    public boolean retrieveLoanPayment(Account account, BigDecimal amount){
+    public boolean retrieveLoanPayment(Account account, BigDecimal amount) {
         return false;
     }
 }

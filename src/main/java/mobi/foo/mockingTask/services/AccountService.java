@@ -9,10 +9,10 @@ import java.util.List;
 
 @Service
 public class AccountService {
-    private BankClientAPI bankAPI;
+    private final BankClientAPI bankAPI;
 
-    public AccountService(BankClientAPI bankApi) {
-        this.bankAPI = bankApi;
+    public AccountService(BankClientAPI bankAPI) {
+        this.bankAPI = bankAPI;
     }
 
     public List<Account> getAccounts() {
@@ -20,10 +20,10 @@ public class AccountService {
     }
 
     public boolean retrieveTransfer(Account sourceAccount, Account destinationAccount, BigDecimal amount) {
-        return bankAPI.retrieveTransfer(sourceAccount, destinationAccount,amount);
+        return bankAPI.retrieveTransfer(sourceAccount, destinationAccount, amount);
     }
 
     public boolean retrieveLoanPayment(Account account, BigDecimal amount) {
-        return bankAPI.retrieveLoanPayment(account,amount);
+        return bankAPI.retrieveLoanPayment(account, amount);
     }
 }

@@ -10,9 +10,8 @@ import java.util.List;
 public class CardService {
     private final BankClientAPI bankAPI;
 
-
-    public CardService(BankClientAPI bankClientAPI) {
-        this.bankAPI = bankClientAPI;
+    public CardService(BankClientAPI bankAPI) {
+        this.bankAPI = bankAPI;
     }
 
     public List<Card> getCards() {
