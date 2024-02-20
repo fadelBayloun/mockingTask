@@ -4,11 +4,12 @@ import mobi.foo.mockingTask.apis.BankClientAPI;
 import mobi.foo.mockingTask.models.Account;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
 public class AccountService {
-    private final BankClientAPI bankAPI;
+    private BankClientAPI bankAPI;
 
     public AccountService(BankClientAPI bankApi) {
         this.bankAPI = bankApi;
@@ -18,11 +19,11 @@ public class AccountService {
         return bankAPI.getAccounts();
     }
 
-    public boolean retrieveTransfer(Account sourceAccount, Account destinationAccount) {
-        return bankAPI.retrieveTransfer(sourceAccount, destinationAccount);
+    public boolean retrieveTransfer(Account sourceAccount, Account destinationAccount, BigDecimal amount) {
+        return bankAPI.retrieveTransfer(sourceAccount, destinationAccount,amount);
     }
 
-    public boolean retrieveLoanPayment(Account account) {
-        return bankAPI.retrieveLoanPayment(account);
+    public boolean retrieveLoanPayment(Account account, BigDecimal amount) {
+        return bankAPI.retrieveLoanPayment(account,amount);
     }
 }

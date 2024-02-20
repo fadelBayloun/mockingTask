@@ -4,6 +4,7 @@ import mobi.foo.mockingTask.models.Account;
 import mobi.foo.mockingTask.models.Card;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 
@@ -17,11 +18,11 @@ public class ActualBankClientAPI implements BankClientAPI{
         return Collections.emptyList();
     }
 
-    public boolean retrieveTransfer(Account sourceAccount,Account destinationAccount){
-        return true;
+    public boolean retrieveTransfer(Account sourceAccount,Account destinationAccount, BigDecimal amount){
+        return false;
     }
 
-    public boolean retrieveLoanPayment(Account account){
-        return true;
+    public boolean retrieveLoanPayment(Account account, BigDecimal amount){
+        return false;
     }
 }
