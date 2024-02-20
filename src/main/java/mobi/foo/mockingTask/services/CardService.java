@@ -1,15 +1,21 @@
 package mobi.foo.mockingTask.services;
 
 import mobi.foo.mockingTask.apis.BankClientAPI;
-import org.springframework.beans.factory.annotation.Autowired;
+import mobi.foo.mockingTask.models.Card;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class CardService {
-    private final BankClientAPI bankClientAPI;
+    private final BankClientAPI bankAPI;
 
 
     public CardService(BankClientAPI bankClientAPI) {
-        this.bankClientAPI = bankClientAPI;
+        this.bankAPI = bankClientAPI;
+    }
+
+    public List<Card> getCards() {
+        return bankAPI.getCards();
     }
 }

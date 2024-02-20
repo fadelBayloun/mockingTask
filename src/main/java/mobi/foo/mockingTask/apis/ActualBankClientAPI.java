@@ -13,7 +13,7 @@ public class ActualBankClientAPI implements BankClientAPI{
         return Collections.emptyList();
     }
 
-    public List<Card> getCards(){
+    public List<Card> getCards() {
         return Collections.emptyList();
     }
 
